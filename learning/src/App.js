@@ -4,8 +4,8 @@ import "./index.js";
 export default function App() {
   return (
     <div className="App">
-      <h1>hello dev katampoi </h1>
-      <h2>feels good to be back </h2>
+      <h1> Your Appointments </h1>
+      
     </div>
   );
 }
