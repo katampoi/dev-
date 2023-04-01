@@ -1,5 +1,6 @@
 import { BiCalendarPlus } from "react-icons/bi";
 
+
 const AddAppointments = () => {
     return (
       <div>
