@@ -7,16 +7,19 @@ const AddAppointments = () => {
 
     return (
       <div>
-        <button onClick={() => {setToggleForm(!toggleForm)}}
-        className="bg-blue-400 text-white px-2 py-3 w-full text-left rounded-t-md">
+        <button
+          onClick={() => {
+            setToggleForm(!toggleForm);
+          }}
+          className={`bg-blue-400 text-white px-2 py-3 w-full text-left rounded-t-md ${toggleForm ? 'rounded-t-md' : 'rounded'}`}
+        >
           <div>
             <BiCalendarPlus className="inline-block align-text-top" /> Add
             Appointment
           </div>
         </button>
 
-        {
-        toggleForm && 
+        {toggleForm && (
           <div className="border-r-2 border-b-2 border-l-2 border-light-blue-500 rounded-b-md pl-4 pr-4 pb-4">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start  sm:pt-5">
               <label
@@ -115,7 +118,7 @@ const AddAppointments = () => {
               </div>
             </div>
           </div>
-        }
+        )}
       </div>
     );
 }
