@@ -3,7 +3,19 @@ import { useState } from "react";
 
 const AddAppointments = () => {
 
+
+    const clearData = {
+      ownerName: "",
+      petName: "",
+      date: "",
+      startTime: "",
+      endTime: "",
+    }
+
   let [toggleForm, setToggleForm] = useState(false);
+  let[formData, setFormData] = useState(clearData);
+
+
 
     return (
       <div>
@@ -33,6 +45,7 @@ const AddAppointments = () => {
                   type="text"
                   name="ownerName"
                   id="ownerName"
+                  onChange={(event) =>{event.target.value}}
                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
